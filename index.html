@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="webrtc.js"></script>
+    <title>Trasmontano Telemedicina</title>
+  </head>
+  
+  <body>
+    
+	<div><video id="remoteVideo" autoplay></video></div>
+	
+    <div><video id="localVideo"  autoplay muted></video></div>
+	
+    <input id="videoCallButton" type="button" disabled value="Iniciar atendimento"/>
+    <input id="endCallButton"   type="button" disabled value="Terminar arendimento"/>
+
+    <script>window.addEventListener("load", pageReady);</script>
+
+	</body>
+</html>
