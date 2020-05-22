@@ -6,8 +6,8 @@ window.RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSess
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition 
   || window.msSpeechRecognition || window.oSpeechRecognition;
 
-//https://tele.trasmontano.com.br:10000/  
-var config = {wssHost: 'wss://tele.trasmontano.com.br:10000/'};
+//https://tele.trasmontano.com.br:9999/  
+var config = {wssHost: 'wss://tele.trasmontano.com.br:9999/'};
 
 var  localVideoElem   = null;
 var  remoteVideoElem  = null;
@@ -61,7 +61,7 @@ function iniciaAtendimento()
     preparaAtendimento();
     
 	// get the local stream, show it in the local video element and send it
-    navigator.getUserMedia({ "audio": false, "video": false }, function (stream) {
+    navigator.getUserMedia({ "audio": true, "video": true }, function (stream) {
     
 	localVideoStream = stream;
 	
