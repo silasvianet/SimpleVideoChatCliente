@@ -5,14 +5,14 @@ const express = require('express'),
       fs      = require('fs'),
       router = express.Router();
 
-//const pkey = fs.readFileSync('./ssl/key.pem'),
-//pcert = fs.readFileSync('./ssl/cert.pem'),
-//options = {key: pkey, cert: pcert, passphrase: '123456789'};
+const pkey = fs.readFileSync('./ssl/key.pem'),
+pcert = fs.readFileSync('./ssl/cert.pem'),
+options = {key: pkey, cert: pcert, passphrase: '123456789'};
 	  
-var options = {
-    pfx: fs.readFileSync('./Trasmontano.pfx'),
-    passphrase: 'infra@Tras1'
-}; 
+//var options = {
+//    pfx: fs.readFileSync('./Trasmontano.pfx'),
+//    passphrase: 'infra@Tras1'
+//}; 
  
 // use express static to deliver resources HTML, CSS, JS, etc)
 // from the public folder 
